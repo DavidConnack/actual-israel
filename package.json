@@ -1,0 +1,16 @@
+{
+  "name": "actual-israel",
+  "version": "1.0.0",
+  "description": "Intergration that allows the automatic importing of transaction from Israeli financial institutions to an Actual Budget server",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "DavidConnack",
+  "license": "ISC",
+  "dependencies": {
+    "@actual-app/api": "^24.10.1",
+    "israeli-bank-scrapers": "^5.2.0"
+  }
+}
