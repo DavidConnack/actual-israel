@@ -9,7 +9,7 @@ import {
 export const initActual = async (serverURL, password, budgetId) => {
   try {
     await init({
-      dataDir: "./",
+      dataDir: "/config/",
       serverURL,
       password,
     });

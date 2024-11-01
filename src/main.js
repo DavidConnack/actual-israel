@@ -2,7 +2,7 @@ import { importActualTransactions, initActual, stopActual } from "./actual.js";
 import { getYesterdaysTransactions } from "./scraper.js";
 import { readFile } from "fs/promises";
 
-const config = JSON.parse(await readFile("./config.json", "utf8"));
+const config = JSON.parse(await readFile("/config/config.json", "utf8"));
 
 async function processAccountMappers(accountMappers) {
   for (const accountMapper of accountMappers) {
