@@ -12,6 +12,7 @@ const config = JSON.parse(await readFile(configPath, "utf8"));
 
 async function processAccountMappers(accountMappers) {
   for (const accountMapper of accountMappers) {
+    console.log(`starting sync of account ${accountMapper.actualAccountName}`);
     const yesterdaysTransactions = await getYesterdaysTransactions(
       accountMapper.scraperType,
       accountMapper.scraperCredentials,
