@@ -7,8 +7,7 @@ import {
 import { getYesterdaysTransactions } from "./scraper.js";
 import { readFile } from "fs/promises";
 
-const configPath = process.env.CONFIG_PATH;
-const config = JSON.parse(await readFile(configPath, "utf8"));
+const config = JSON.parse(await readFile("/config/config.json", "utf8"));
 
 async function processAccountMappers(accountMappers) {
   for (const accountMapper of accountMappers) {
