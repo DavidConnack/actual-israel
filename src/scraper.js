@@ -1,7 +1,7 @@
 import { createScraper } from "israeli-bank-scrapers";
 
-const yesterdaysDate = () =>
-  new Date(Date.now() - 86400000 * 7).toISOString().split("T")[0];
+const startDate = () =>
+  new Date(Date.now() - 86400000 * 2).toISOString().split("T")[0];
 
 export const getYesterdaysTransactions = async (
   companyId,
@@ -10,7 +10,7 @@ export const getYesterdaysTransactions = async (
 ) => {
   const options = {
     companyId,
-    startDate: yesterdaysDate(),
+    startDate: startDate(),
     combineInstallments: false,
     showBrowser: false,
   };
