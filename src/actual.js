@@ -52,7 +52,7 @@ export const importActualTransactions = async (
         amount: parseInt((currentTxn.chargedAmount * 100).toFixed(0)),
         payee_name: currentTxn.description,
         notes: currentTxn.memo,
-        imported_id: currentTxn.identifier,
+        imported_id: currentTxn.identifier + currentTxn.date,
         cleared: currentTxn.status === "completed",
       });
     }
