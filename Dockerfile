@@ -1,6 +1,8 @@
-FROM ghcr.io/puppeteer/puppeteer:latest
-WORKDIR /home/pptruser
-COPY --chown=pptruser:pptruser ./package*.json .
+FROM public.ecr.aws/docker/library/node:lts
+WORKDIR /home/node
+USER node
+COPY --chown=node:node ./package*.json .
+COPY --chown=node:node ./src .
 RUN npm install
-COPY --chown=pptruser:pptruser ./src .
+RUN npx puppeteer browsers install chrome
 CMD ["node","main.js"]
