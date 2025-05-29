@@ -12,7 +12,7 @@ export const getYesterdaysTransactions = async (
     companyId,
     startDate: startDate(),
     combineInstallments: false,
-    showBrowser: false,
+    showBrowser: true,
   };
   try {
     const scraper = createScraper(options);
